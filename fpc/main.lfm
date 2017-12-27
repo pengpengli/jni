@@ -1,0 +1,126 @@
+object fmain: Tfmain
+  Left = 564
+  Height = 408
+  Top = 135
+  Width = 484
+  Caption = 'Delphi调用Java类'
+  ClientHeight = 408
+  ClientWidth = 484
+  Color = clBtnFace
+  Font.CharSet = GB2312_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = '宋体'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.8.0.6'
+  object lblResult: TLabel
+    Left = 60
+    Height = 12
+    Top = 230
+    Width = 36
+    Caption = '结果：'
+    ParentColor = False
+  end
+  object DisplayView: TMemo
+    Left = 0
+    Height = 254
+    Top = 104
+    Width = 484
+    Align = alClient
+    ScrollBars = ssVertical
+    TabOrder = 0
+    WordWrap = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 358
+    Width = 484
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 484
+    TabOrder = 1
+    object btnExit1: TButton
+      Left = 366
+      Height = 23
+      Top = 12
+      Width = 74
+      Anchors = [akTop, akRight]
+      Caption = '退出'
+      OnClick = btnExitClick
+      TabOrder = 0
+    end
+    object btnInvoking1: TButton
+      Left = 268
+      Height = 23
+      Top = 12
+      Width = 74
+      Anchors = [akTop, akRight]
+      Caption = '调用'
+      OnClick = btnInvokingClick
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 104
+    Top = 0
+    Width = 484
+    Align = alTop
+    ClientHeight = 104
+    ClientWidth = 484
+    TabOrder = 2
+    object lblClassName: TLabel
+      Left = 37
+      Height = 12
+      Top = 20
+      Width = 36
+      Caption = '类名：'
+      ParentColor = False
+    end
+    object edtClassName: TEdit
+      Left = 74
+      Height = 20
+      Top = 12
+      Width = 376
+      TabOrder = 0
+      Text = 'com/teclick/arch/test/HelloWorld'
+    end
+    object lblMethodName: TLabel
+      Left = 25
+      Height = 12
+      Top = 48
+      Width = 48
+      Caption = '方法名：'
+      ParentColor = False
+    end
+    object edtMethodName: TEdit
+      Left = 74
+      Height = 20
+      Top = 40
+      Width = 376
+      TabOrder = 1
+      Text = 'showContext'
+    end
+    object lblData: TLabel
+      Left = 25
+      Height = 12
+      Top = 70
+      Width = 48
+      Caption = '参数值：'
+      ParentColor = False
+    end
+    object edtData: TEdit
+      Left = 74
+      Height = 20
+      Top = 70
+      Width = 376
+      TabOrder = 2
+      Text = 'English 中文'
+    end
+  end
+end
